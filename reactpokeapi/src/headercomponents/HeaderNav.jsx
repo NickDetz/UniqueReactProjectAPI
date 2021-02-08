@@ -1,20 +1,18 @@
 import React from 'react'
-import {Nav, Navbar, FormControl, Form, Button} from 'react-bootstrap'
+import {Nav, Navbar} from 'react-bootstrap'
 
  function HeaderNav() {
     return (
         <div>
-            <Navbar bg="primary" variant="dark">
-    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+            <Navbar bg="dark" variant="danger">
+            <i className="fas fa-diagnoses fa-4x" style={{color : 'green'}}></i>
+    <Navbar.Brand href="#home">Home Link</Navbar.Brand>
     <Nav className="mr-auto">
-      <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
+      <Nav.Link href="#home">Link1</Nav.Link>
+      <Nav.Link href="#features">Link 2</Nav.Link>
+      <Nav.Link href="#pricing">Link 3</Nav.Link>
     </Nav>
-    <Form inline>
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-light">Search</Button>
-    </Form>
+    
   </Navbar>
         </div>
     )
