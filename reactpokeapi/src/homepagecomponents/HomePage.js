@@ -1,25 +1,45 @@
 import React from 'react';
 import './HomePage.css';
 import {Container, Row, Col, Card, Button} from 'react-bootstrap'
-
+import {Link} from 'react-router-dom'
+//Remember with bootstrap 12 is the max columns
 const HomePage = () => {
     return (
         <div>
            <Container>
                 <Row>
-                <Col><Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="holder.js/100px180" />
-  <Card.Body>
-    <Card.Title>Card Title</Card.Title>
-    <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
-  </Card.Body>
-</Card></Col>
-                <Col>Hello Column 2</Col>
-                <Col>Hello Column 3</Col>
+                <Col lg={4}><Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src="" />
+                            <Card.Body>
+                             <Card.Title>PokeMon</Card.Title>
+                                <Card.Text>
+                                    Going To see PokeMon themselves
+                                </Card.Text>
+                                
+                                    <Link to ='/PokePage'> To Pokemon Page</Link>
+                                    
+                                </Card.Body>
+                                </Card></Col>
+                <Col lg={4}><Card style={{ width: '18rem' }}>
+                                    <Card.Img variant="top" src="" />
+                                    <Card.Body>
+                                <Card.Title>Move Set</Card.Title>
+                                 <Card.Text>
+                                     Going to see Move Sets
+                                </Card.Text>
+                                <Link to ='/PokiMoves'> To Pokemon Page</Link>
+                                         </Card.Body>
+                                    </Card></Col>
+                <Col lg={4}><Card style={{ width: '18rem' }}>
+                                     <Card.Img variant="top" src="" />
+                                     <Card.Body>
+                                         <Card.Title>Probably Type</Card.Title>
+                                             <Card.Text>
+                                                 Going to see a 3rd thing
+                                            </Card.Text>
+                                            <Link to ='/PokiTypes'> To Pokemon Page</Link>
+                                    </Card.Body>
+                                    </Card></Col>
                 </Row>
 
            </Container>

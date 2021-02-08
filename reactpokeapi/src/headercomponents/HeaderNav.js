@@ -6,7 +6,7 @@ import {Nav, Navbar} from 'react-bootstrap'
         <div>
             <Navbar bg="dark" variant="danger">
             <i className="fas fa-diagnoses fa-4x" style={{color : 'green'}}></i>
-    <Navbar.Brand href="#home">Home Link</Navbar.Brand>
+    <Navbar.Brand href="#home">Poke Api</Navbar.Brand>
     <Nav className="mr-auto">
       <Nav.Link href="#home">Link1</Nav.Link>
       <Nav.Link href="#features">Link 2</Nav.Link>
