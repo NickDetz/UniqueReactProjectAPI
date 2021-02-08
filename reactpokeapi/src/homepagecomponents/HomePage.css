@@ -1,5 +1,8 @@
-.HomePage {
+.wrapper > div {
   display: grid;
-  grid-template-columns: 35%;
-  color: blue;
+  grid-template-columns: 100px 100px;
+}
+
+.HomePage {
+  background-color: gray;
 }

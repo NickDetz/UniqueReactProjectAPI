@@ -3,7 +3,7 @@ import './HomePage.css';
 
  const BottomPage = () => {
     return (
-        <div className='HomePage'>
+        <div >
           <h1>  Hello From Bottom Page </h1>
         </div>
     )
