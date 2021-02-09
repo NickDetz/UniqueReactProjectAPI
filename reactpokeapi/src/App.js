@@ -7,6 +7,7 @@ import BottomPage from './homepagecomponents/BottomPage';
 import PokeComponent from './pokemoncomponents/PokeComponent';
 import PokiDisplay from './pokemoncomponents/PokiDisplay';
 import './pokemoncomponents/PokeDis.css';
+import PokiMoveComponent from './PokiMovesComponents/PokiMoveComponent';
 
 const App = () => {
  
@@ -35,7 +36,7 @@ const App = () => {
 
             <Route exact path='/PokiMoves'>
               <>
-              {/* Components */}
+              <PokiMoveComponent/>
               </>
             </Route>
 

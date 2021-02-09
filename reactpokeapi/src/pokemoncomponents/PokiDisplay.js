@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'react'
-import {Container, Card, Image} from 'react-bootstrap';
+import {Container, Card} from 'react-bootstrap';
 
 
 
@@ -12,7 +12,10 @@ import {Container, Card, Image} from 'react-bootstrap';
     return (
         <>
             <Container>
-                
+                <Card>
+                    
+                </Card>
+
             </Container>
                 <div className='pokeimage'>
                 <img src={pokemon.sprites.front_default} />
