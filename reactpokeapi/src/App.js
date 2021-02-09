@@ -6,6 +6,7 @@ import HomePage from './homepagecomponents/HomePage';
 import BottomPage from './homepagecomponents/BottomPage';
 import PokeComponent from './pokemoncomponents/PokeComponent';
 import PokiDisplay from './pokemoncomponents/PokiDisplay';
+import './pokemoncomponents/PokeDis.css';
 
 const App = () => {
  

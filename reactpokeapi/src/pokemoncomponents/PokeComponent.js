@@ -11,6 +11,7 @@ const PokeComponent = () => {
 
     const  getPokeValue = async pokemonId => {
             axios.get(`https://pokeapi.co/api/v2/pokemon/${pokimonId}/`).then(res => {
+                pokeObject(res.data)
                 console.log(res.data)
                 fillObject(true);
             })
@@ -19,6 +20,11 @@ const PokeComponent = () => {
 
     const Consoling = (pokiname) => {
         console.log(pokiname)
+    }
+
+    const ClearPokeData = () => {
+        pokeObject({})
+        fillObject(false)
     }
 
     return (
@@ -33,12 +39,14 @@ const PokeComponent = () => {
                          />
                         </InputGroup>
                         <Button onClick = {()=> Consoling(pokiname)}> Bleg Button</Button>
+                        
             <Container>
             <p>Poki id looking for is {pokimonId}</p>
             <Button onClick={()=> findPokeId(pokimonId + 1)}>Click me</Button>
             <Button onClick ={() => getPokeValue()}>Get ID Pokemon</Button>
+            {isfilled && <Button onClick={() => ClearPokeData()}>Clear</Button>}
             </Container> 
-            {isfilled  && <PokiDisplay {...pokemon} />}
+            {isfilled  && <PokiDisplay pokemon = {pokemon} />}
         </div>
         
     )
