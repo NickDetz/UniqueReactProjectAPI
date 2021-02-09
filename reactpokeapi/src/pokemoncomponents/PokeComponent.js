@@ -4,11 +4,17 @@ import {Container, Button, FormControl, InputGroup} from 'react-bootstrap'
 import PokiDisplay from './PokiDisplay';
 
 const PokeComponent = () => {
-    const [pokimonid, findPokeId] = useState(0);
+    const [pokimonId, findPokeId] = useState(1);
     const [pokiname, pokeName] = useState('');
-    const [pokemon, pokeObject] = ([{}]);
+     const [pokemon, pokeObject] = useState({});
+     const [isfilled, fillObject] = useState(false)
 
-
+    const  getPokeValue = async pokemonId => {
+            axios.get(`https://pokeapi.co/api/v2/pokemon/${pokimonId}/`).then(res => {
+                console.log(res.data)
+                fillObject(true);
+            })
+    }
     
 
     const Consoling = (pokiname) => {
@@ -28,11 +34,13 @@ const PokeComponent = () => {
                         </InputGroup>
                         <Button onClick = {()=> Consoling(pokiname)}> Bleg Button</Button>
             <Container>
-            <p>Poki id looking for is {pokimonid}</p>
-            <Button onClick={()=> findPokeId(pokimonid + 1)}>Click me</Button>
+            <p>Poki id looking for is {pokimonId}</p>
+            <Button onClick={()=> findPokeId(pokimonId + 1)}>Click me</Button>
+            <Button onClick ={() => getPokeValue()}>Get ID Pokemon</Button>
             </Container> 
-            <PokiDisplay></PokiDisplay> 
+            {isfilled  && <PokiDisplay {...pokemon} />}
         </div>
+        
     )
 }
 
