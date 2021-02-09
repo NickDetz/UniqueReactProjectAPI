@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import HomePage from './homepagecomponents/HomePage';
 import BottomPage from './homepagecomponents/BottomPage';
 import PokeComponent from './pokemoncomponents/PokeComponent';
+import PokiDisplay from './pokemoncomponents/PokiDisplay';
 
 const App = () => {
  
@@ -27,6 +28,7 @@ const App = () => {
             <Route exact path='/PokePage'>
               <Fragment>
               <PokeComponent/>
+              
               </Fragment>
             </Route>
 
