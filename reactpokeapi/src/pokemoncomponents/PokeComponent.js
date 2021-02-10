@@ -42,7 +42,7 @@ const PokeComponent = () => {
                         <Button onClick = {()=> Consoling(pokiname)}> Bleg Button</Button>
                         
             <Container>
-            <p>Poki id looking for is {pokimonId}</p>
+            
             <Button onClick={()=> findPokeId(pokimonId + 1)}>+</Button>
             {pokimonId > 1 && <Button onClick={()=> findPokeId(pokimonId - 1)}>-</Button>}
             <Button onClick ={() => getPokeValue()}>Get ID Pokemon</Button>
