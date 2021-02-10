@@ -11,7 +11,7 @@ const PokeComponent = () => {
      const [alertNameError, alertNameObj] = useState(false)
      
 
-    const  getPokeValue = async pokemonId => {
+    const  getPokeValue = pokemonId => {
             axios.get(`https://pokeapi.co/api/v2/pokemon/${pokimonId}/`).then(res => {
                 pokeObject(res.data)
                 console.log(res.data)
