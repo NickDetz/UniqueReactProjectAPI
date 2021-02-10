@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import {Card, Container, Row, Col} from 'react-bootstrap'
+import PokiInterface from './PokiInterface';
 
 const PokiMoveComponent = () => {
     const [pokiMoveId1, pokeMoveId1] = useState(1)
@@ -21,6 +22,10 @@ const PokiMoveComponent = () => {
                 <Col lg={3}>column 3 </Col>
                 <Col lg={3}>column 4 </Col>
                 </Row>
+            </Container>
+
+            <Container>
+            <PokiInterface></PokiInterface>
             </Container>
         </div>
     )

@@ -20,12 +20,9 @@ const PokeComponent = () => {
     }
     
 
-    const Consoling = (pokiname) => {
-        console.log(pokiname)
-    }
 
     const getPokeByName = async pokiname => {
-        axios.get(`https://pokeapi.co/api/v2/pokemon/${pokiname}/`).then(res => {
+        axios.get(`https://pokeapi.co/api/v2/pokemon/${pokiname.toLowerCase()}/`).then(res => {
             console.log(res.data)
             pokeObject(res.data)
             fillObject(true)
@@ -53,19 +50,19 @@ const PokeComponent = () => {
                 <InputGroup.Prepend>
                      <InputGroup.Text id="inputGroup-sizing-default">Name</InputGroup.Text>
                         </InputGroup.Prepend>
-                         <FormControl type='text' placeholder="Pokimon Name" className='mr-sm-2'
+                         <FormControl type='text' placeholder="Pokemon Name or ID" className='mr-sm-2'
                             onChange = {e => pokeName(e.target.value)}
 
                          />
                         </InputGroup>
-                        <Button onClick = {()=> getPokeByName(pokiname)} >Find Pokemon by name </Button>
+                        <Button onClick = {()=> getPokeByName(pokiname)} >Find Pokemon by name or number </Button>
                         </Container>      
             <Container>
             {isfilled  && <PokiDisplay pokemon = {pokemon}/>}
             <Button onClick={()=> findPokeId(pokimonId + 1)}>+</Button>
             {pokimonId > 1 && <Button onClick={()=> findPokeId(pokimonId - 1)}>-</Button>}
             <Button onClick ={() => getPokeValue()}>Get ID Pokemon</Button>
-            {alertNameError && <Alert variant='danger'>Wrong Name check spelling</Alert>}
+            {alertNameError && <Alert variant='danger'>Wrong Name check spelling or Id not Found</Alert>}
             {isfilled && <Button onClick={() => ClearPokeData()}>Clear</Button>}
             {isfilled || <div>{pokimonId}</div>}
             </Container> 
