@@ -11,16 +11,16 @@ import {Container, Card} from 'react-bootstrap';
 
     return (
         <>
-            <Container>
+           
+                <div className='pokeimage'>
+                <img src={pokemon.sprites.front_default} />
+                </div>
+                <Container>
                 <Card>
                     
                 </Card>
 
             </Container>
-                <div className='pokeimage'>
-                <img src={pokemon.sprites.front_default} />
-                </div>
-                
               
          </>   
     )

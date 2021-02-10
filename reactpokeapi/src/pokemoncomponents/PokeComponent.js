@@ -25,6 +25,7 @@ const PokeComponent = () => {
     const ClearPokeData = () => {
         pokeObject({})
         fillObject(false)
+        findPokeId(1)
     }
 
     return (
@@ -42,7 +43,8 @@ const PokeComponent = () => {
                         
             <Container>
             <p>Poki id looking for is {pokimonId}</p>
-            <Button onClick={()=> findPokeId(pokimonId + 1)}>Click me</Button>
+            <Button onClick={()=> findPokeId(pokimonId + 1)}>+</Button>
+            {pokimonId > 1 && <Button onClick={()=> findPokeId(pokimonId - 1)}>-</Button>}
             <Button onClick ={() => getPokeValue()}>Get ID Pokemon</Button>
             {isfilled && <Button onClick={() => ClearPokeData()}>Clear</Button>}
             </Container> 

@@ -9,6 +9,8 @@ const PokiMoveComponent = () => {
     const [pokiMoveId4, pokeMoveId4] = useState(1)
     const [pokeMove, pokeMoves] = useState([]);
 
+    
+
 
     return (
         <div>
