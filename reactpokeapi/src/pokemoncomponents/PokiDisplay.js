@@ -1,15 +1,16 @@
 import React from 'react'
 import PropTypes from 'react'
 import {Container, Card, Badge, ListGroup} from 'react-bootstrap';
-import PokeTypes from './PokeTypes';
 
 
+        
  const PokiDisplay = ({pokemon}) => {
 
     const {types, height, base_experience, id} = pokemon;
 
-
+        
     return (
+        
         <>
            <h1 className="Poketitle"><Badge>{pokemon.name}</Badge> </h1>
                 <div className='pokeimage'>
@@ -27,6 +28,7 @@ import PokeTypes from './PokeTypes';
          </>   
     )
 }
+ 
 
 
 

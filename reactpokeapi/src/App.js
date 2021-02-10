@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import HomePage from './homepagecomponents/HomePage';
 import BottomPage from './homepagecomponents/BottomPage';
 import PokeComponent from './pokemoncomponents/PokeComponent';
-import PokiDisplay from './pokemoncomponents/PokiDisplay';
 import './pokemoncomponents/PokeDis.css';
 import PokiMoveComponent from './PokiMovesComponents/PokiMoveComponent';
 

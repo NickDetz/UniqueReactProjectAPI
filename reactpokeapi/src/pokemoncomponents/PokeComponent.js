@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios';
-import {Container, Button, FormControl, InputGroup} from 'react-bootstrap'
+import {Container, Button, FormControl, InputGroup, Alert} from 'react-bootstrap'
 import PokiDisplay from './PokiDisplay';
 
 const PokeComponent = () => {
@@ -8,6 +8,8 @@ const PokeComponent = () => {
     const [pokiname, pokeName] = useState('');
      const [pokemon, pokeObject] = useState({});
      const [isfilled, fillObject] = useState(false)
+     const [alertNameError, alertNameObj] = useState(false)
+     
 
     const  getPokeValue = async pokemonId => {
             axios.get(`https://pokeapi.co/api/v2/pokemon/${pokimonId}/`).then(res => {
@@ -25,8 +27,11 @@ const PokeComponent = () => {
     const getPokeByName = async pokiname => {
         axios.get(`https://pokeapi.co/api/v2/pokemon/${pokiname}/`).then(res => {
             console.log(res.data)
+            pokeObject(res.data)
+            fillObject(true)
         }).catch(error => {
-            console.log('wrong name')
+            alertNameObj(true);
+            setTimeout(() => alertNameObj(false), 15000);
         }) 
 
         
@@ -56,13 +61,15 @@ const PokeComponent = () => {
                         <Button onClick = {()=> getPokeByName(pokiname)} >Find Pokemon by name </Button>
                         </Container>      
             <Container>
-            
+            {isfilled  && <PokiDisplay pokemon = {pokemon}/>}
             <Button onClick={()=> findPokeId(pokimonId + 1)}>+</Button>
             {pokimonId > 1 && <Button onClick={()=> findPokeId(pokimonId - 1)}>-</Button>}
             <Button onClick ={() => getPokeValue()}>Get ID Pokemon</Button>
+            {alertNameError && <Alert variant='danger'>Wrong Name check spelling</Alert>}
             {isfilled && <Button onClick={() => ClearPokeData()}>Clear</Button>}
+            {isfilled || <div>{pokimonId}</div>}
             </Container> 
-            {isfilled  && <PokiDisplay pokemon = {pokemon} />}
+           
         </div>
         
     )
