@@ -22,6 +22,19 @@ const PokeComponent = () => {
         console.log(pokiname)
     }
 
+    const getPokeByName = async pokiname => {
+        axios.get(`https://pokeapi.co/api/v2/pokemon/${pokiname}/`).then(res => {
+            console.log(res.data)
+        }).catch(error => {
+            console.log('wrong name')
+        }) 
+
+        
+    } 
+
+   
+
+
     const ClearPokeData = () => {
         pokeObject({})
         fillObject(false)
@@ -30,6 +43,7 @@ const PokeComponent = () => {
 
     return (
         <div>
+            <Container>
              <InputGroup className="container-sm" >
                 <InputGroup.Prepend>
                      <InputGroup.Text id="inputGroup-sizing-default">Name</InputGroup.Text>
@@ -39,8 +53,8 @@ const PokeComponent = () => {
 
                          />
                         </InputGroup>
-                        <Button onClick = {()=> Consoling(pokiname)}> Bleg Button</Button>
-                        
+                        <Button onClick = {()=> getPokeByName(pokiname)} >Find Pokemon by name </Button>
+                        </Container>      
             <Container>
             
             <Button onClick={()=> findPokeId(pokimonId + 1)}>+</Button>
