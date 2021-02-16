@@ -20,6 +20,9 @@ import React from 'react'
 import {Card} from 'react-bootstrap'
 
 const  PokiMovePic = () => {
+
+
+    
     
     return (
         <Card.Img src={bug}></Card.Img>
