@@ -1,10 +1,11 @@
 import React from 'react'
 import {Card} from 'react-bootstrap'
 
- const PokeInfo = () => {
+ const PokeInfo = ({pokimove}) => {
+     console.log(pokimove)
     return (
         <Card>
-            
+            <Card.Title></Card.Title>
         </Card>
 
     )
