@@ -16,12 +16,26 @@ import pyschic from './PokemonassetsPokiApi/pyschictype.png';
 import rock from './PokemonassetsPokiApi/rocktype.png';
 import steel from './PokemonassetsPokiApi/steeltype.png';
 import water from './PokemonassetsPokiApi/watertype.png';
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import {Card} from 'react-bootstrap'
 
-const  PokiMovePic = () => {
+const  PokiMovePic = ({pokimove}) => {
+    const [checking, setCheckState] = useState(false)
 
-
+    useEffect(() => {
+        console.log('useEffect from PokiMove')
+        console.log(checking)
+        console.log(pokimove.type.name)
+        switch(pokimove.type.name){
+            case "fighting":{
+                console.log('there is a fighting type')
+                break;
+            }
+            default : {
+                console.log('trains')
+            }
+        }
+    }, [])
     
     
     return (

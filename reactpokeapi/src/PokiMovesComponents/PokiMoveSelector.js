@@ -27,7 +27,7 @@ import PokeInfo from './PokeInfo';
      
     return (
         <Col lg={3}>
-        <PokiMovePic pokimove={pokiMove}/>
+       {loading && <PokiMovePic pokimove={pokiMove}/> }
            <Card.Body>
              {/* This code sometimes works  */}
                {loading && <PokeInfo pokimove={pokiMove} /> } 
