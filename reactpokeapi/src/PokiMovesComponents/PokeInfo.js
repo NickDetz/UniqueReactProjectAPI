@@ -5,7 +5,7 @@ import {Card} from 'react-bootstrap'
      console.log(pokimove)
     return (
         <Card>
-            <Card.Title></Card.Title>
+            <Card.Title>{pokimove.name}</Card.Title>
         </Card>
 
     )

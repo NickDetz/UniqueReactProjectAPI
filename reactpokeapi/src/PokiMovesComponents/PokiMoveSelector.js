@@ -16,7 +16,9 @@ import PokeInfo from './PokeInfo';
             console.log(res.data)
             pokiMoveObj(res.data)
             setLoading(true)
-        })
+        }).catch(error => {
+            console.log('Error: ', error)
+          })
 
      }, [])
 
@@ -27,8 +29,8 @@ import PokeInfo from './PokeInfo';
         <Col lg={3}>
         <PokiMovePic pokimove={pokiMove}/>
            <Card.Body>
-             {/* <Card.Title>Move Name {pokiMove.name} </Card.Title> */}
-                <PokeInfo pokimove={pokiMove} />  
+             {/* This code sometimes works  */}
+               {loading && <PokeInfo pokimove={pokiMove} /> } 
                <Button variant="primary" onClick={() => {setMove()}}>Get new move data</Button>
                </Card.Body>
    </Col>
