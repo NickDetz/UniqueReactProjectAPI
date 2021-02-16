@@ -3,6 +3,7 @@ import PropTypes from 'react'
 import {Col, Card, Button} from 'react-bootstrap'
 import PokiMovePic from './PokiMovePic';
 import axios from 'axios';
+import PokeInfo from './PokeInfo';
 
  const  PokiMoveSelector = ({defaultId}) => {
      const [pokiMove, pokiMoveObj] = useState();
@@ -24,10 +25,8 @@ import axios from 'axios';
         <Col lg={3}>
         <PokiMovePic pokimove={pokiMove}/>
            <Card.Body>
-            <Card.Title>Move Name {pokiMove.name} </Card.Title>
-               <Card.Text>
-               Move Data
-               </Card.Text>
+             {/* <Card.Title>Move Name {pokiMove.name} </Card.Title> */}
+                <PokeInfo pokimove={pokiMove} />
                <Button variant="primary" onClick={() => {setMove()}}>Get new move data</Button>
                </Card.Body>
    </Col>
