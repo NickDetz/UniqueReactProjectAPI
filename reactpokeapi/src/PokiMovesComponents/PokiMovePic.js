@@ -67,10 +67,10 @@ const  PokiMovePic = ({pokimove}) => {
             }case 'ice' :{
                 setType(ice)
                 break;
-            }case 'poisen' :{
+            }case 'poison' :{
                 setType(poisen)
                 break;
-            }case 'pyschic' :{
+            }case 'psychic' :{
                 setType(pyschic)
                 break;
             }case 'rock' :{
