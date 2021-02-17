@@ -21,6 +21,7 @@ import {Card} from 'react-bootstrap'
 
 const  PokiMovePic = ({pokimove}) => {
     const [checking, setCheckState] = useState(false)
+    const [type, setType] = useState()
 
     useEffect(() => {
         console.log('useEffect from PokiMove')
@@ -28,18 +29,78 @@ const  PokiMovePic = ({pokimove}) => {
         console.log(pokimove.type.name)
         switch(pokimove.type.name){
             case "fighting":{
-                console.log('there is a fighting type')
+                setType(fighting)
+                break;
+            }
+            case 'normal':{
+                setType(normal)
+                break;
+            }
+            case 'dark' :{
+                setType(dark)
+                break;
+            }
+            case 'dragon' :{
+                setType(dragon)
+                break;
+            }case 'electric' :{
+                setType(electric)
+                break;
+            }case 'fairy' :{
+                setType(fairy)
+                break;
+            }case 'fire' :{
+                setType(fire)
+                break;
+            }case 'flying' :{
+                setType(flying)
+                break;
+            }case 'ghost' :{
+                setType(ghost)
+                break;
+            }case 'grass' :{
+                setType(grass)
+                break;
+            }case 'ground' :{
+                setType(ground)
+                break;
+            }case 'ice' :{
+                setType(ice)
+                break;
+            }case 'poisen' :{
+                setType(poisen)
+                break;
+            }case 'pyschic' :{
+                setType(pyschic)
+                break;
+            }case 'rock' :{
+                setType(rock)
+                break;
+            }case 'steel' :{
+                setType(steel)
+                break;
+            }case 'water' :{
+                setType(water)
+                break;
+            }
+            case 'bug' :{
+                console.log('bug type')
+                setType(bug)
                 break;
             }
             default : {
                 console.log('trains')
+                setType(null)
             }
+           
         }
-    }, [])
+        setCheckState(true);
+    }, [pokimove.type.name])
     
     
     return (
-        <Card.Img src={bug}></Card.Img>
+        checking && <Card.Img src={type}></Card.Img> 
+        
     )
 }
 

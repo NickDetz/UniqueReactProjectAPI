@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import PropTypes from 'react'
-import {Col, Card, Button, Spinner} from 'react-bootstrap'
+import {Col, Card, Button, Badge, Row} from 'react-bootstrap'
 import PokiMovePic from './PokiMovePic';
 import axios from 'axios';
 import PokeInfo from './PokeInfo';
@@ -20,8 +20,10 @@ import PokeInfo from './PokeInfo';
             console.log('Error: ', error)
           })
 
-     }, [])
+     }, [moveId])
 
+
+     
     
      
      
@@ -31,7 +33,11 @@ import PokeInfo from './PokeInfo';
            <Card.Body>
              {/* This code sometimes works  */}
                {loading && <PokeInfo pokimove={pokiMove} /> } 
-               <Button variant="primary" onClick={() => {setMove()}}>Get new move data</Button>
+               <Row>
+               <Button variant="primary" onClick={() => {setMove(moveId + 1)}}>+</Button>
+               <Badge variant='danger'>{moveId}</Badge>
+               {moveId > 1 && <Button variant='warning' onClick={() => {setMove(moveId -1)}}>-</Button>} 
+                </Row>
                </Card.Body>
    </Col>
     )
