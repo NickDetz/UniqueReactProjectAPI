@@ -38,6 +38,7 @@ import PokeInfo from './PokeInfo';
                <Badge variant='danger'>{moveId}</Badge>
                {moveId > 1 && <Button variant='warning' onClick={() => {setMove(moveId -1)}}>-</Button>} 
                 </Row>
+                <Button variant='dark' onClick={() => {setMove(defaultId)}}>Reset selection</Button>
                </Card.Body>
    </Col>
     )
