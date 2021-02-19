@@ -13,11 +13,33 @@ import {
 
 const PokemonState = props => {
     const initialState = {
-        id : 'id',
+        id : {},
         moves : [],
-        types : []
+        types : [], 
+        name : {},
+        wieght : {}
 
     }
+    //Search Pokimon
+    // const  getPokeValue = pokemonId => {
+    //     axios.get(`https://pokeapi.co/api/v2/pokemon/${}/`).then(res => {
+           
+    //         console.log(res.data)
+           
+    //     });
+
+    //     dispatch({
+    //         type: GETPOKIMON,
+    //         payload: res.data
+    //     })
+
+
+
+
+
+
+
+
 
     const [state, dispatch] = useReducer(PokeReducer, initialState)
 

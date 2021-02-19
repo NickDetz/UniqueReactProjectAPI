@@ -33,9 +33,9 @@ const HomePage = () => {
                 <Col lg={4}><Card style={{ width: '18rem' }}>
                                      <Card.Img variant="top" src="" />
                                      <Card.Body>
-                                         <Card.Title>Probably Type</Card.Title>
+                                         <Card.Title>PokiBuilder</Card.Title>
                                              <Card.Text>
-                                                 Going to see a 3rd thing
+                                                Build a Pokemon and Battle!!!
                                             </Card.Text>
                                             <Link to ='/PokiTypes'> To Pokemon Page</Link>
                                     </Card.Body>

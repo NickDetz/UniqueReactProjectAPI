@@ -33,7 +33,7 @@ const PokiMoveComponent = () => {
             </Container>
 
             <Container>
-            <PokiInterface></PokiInterface>
+        
             </Container>
         </div>
     )
