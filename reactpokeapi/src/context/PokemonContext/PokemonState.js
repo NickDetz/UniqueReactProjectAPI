@@ -20,4 +20,18 @@ const PokemonState = props => {
     }
 
     const [state, dispatch] = useReducer(PokeReducer, initialState)
+
+    return <pokemonContext.Provider
+        value = {{
+            pokemon : state.pokemon,
+            pokimove1 : state.move1,
+            pokimove2 : state.move2,
+            pokimove3 : state.move3,
+            pokimove4 : state.move4,
+        }}>
+            {props.children}
+
+    </pokemonContext.Provider>
 }
+
+export default PokemonState;

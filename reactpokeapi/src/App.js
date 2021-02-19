@@ -8,6 +8,7 @@ import PokeComponent from './pokemoncomponents/PokeComponent';
 import './pokemoncomponents/PokeDis.css';
 import './PokiMovesComponents/PokiInterface.css';
 import PokiMoveComponent from './PokiMovesComponents/PokiMoveComponent';
+import PokemonState from './context/PokemonContext/PokemonState';
 
 const App = () => {
  
@@ -16,6 +17,7 @@ const App = () => {
   return (
     <Fragment>
     <div className="App">
+      <PokemonState>
     <Router>
       <HeaderNav/>
      
@@ -52,6 +54,7 @@ const App = () => {
 
         <BottomPage/>
       </Router>
+      </PokemonState>
     </div>
     </Fragment>
   );
