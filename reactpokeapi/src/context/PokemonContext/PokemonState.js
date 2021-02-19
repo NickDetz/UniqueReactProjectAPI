@@ -13,7 +13,11 @@ import {
 
 const PokemonState = props => {
     const initialState = {
-        id : 'id'
+        id : 'id',
+        moves : [],
+        types : []
 
     }
+
+    const [state, dispatch] = useReducer(PokeReducer, initialState)
 }
