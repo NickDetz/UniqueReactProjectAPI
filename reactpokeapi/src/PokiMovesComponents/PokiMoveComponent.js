@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import {Card, Container, Row, Col, Button} from 'react-bootstrap'
-import PokiInterface from './PokiInterface';
+
 import PokiMoveSelector from './PokiMoveSelector';
 
 
@@ -9,6 +9,7 @@ import PokiMoveSelector from './PokiMoveSelector';
 
 const PokiMoveComponent = () => {
     
+
     return (
         <div>
             <Container>

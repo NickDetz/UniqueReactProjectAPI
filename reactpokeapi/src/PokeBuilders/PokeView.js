@@ -1,11 +1,13 @@
 import React from 'react'
 
- const PokeView = ({battler}) => {
+ const PokeView = ({battler, spinnerRed}) => {
+     
     return (
         <div>
-            <img src={battler.sprites.front_default} />
+            {battler ? (<p>{battler.name}</p>) : null}
         </div>
     )
-}
+
+ }
 
 export default PokeView;

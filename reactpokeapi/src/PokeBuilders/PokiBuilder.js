@@ -38,7 +38,7 @@ import PokeView from './PokeView';
             <Col lg={6}>
             <Row>
                {spinnerRed === true && <Spinner animation="border" variant="danger"/>}
-               {spinnerRed === false && <PokeView battler = {pokeBlue}/> }
+               {spinnerRed === false && <PokeView battler = {pokeBlue} isGetting = {spinnerRed}/> }
             </Row>
             </Col>
             <Col lg={6}>
