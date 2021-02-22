@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, {useState, useEffect} from 'react'
-import {Container, Col, Row} from 'react-bootstrap';
+import {Container, Col, Row, Spinner} from 'react-bootstrap';
+import PokeView from './PokeView';
 
 
 
@@ -8,10 +9,13 @@ import {Container, Col, Row} from 'react-bootstrap';
 
     const [pokeRed, getPokiRed] = useState();
     const [pokeBlue, getPokiBlue] = useState();
+    const [spinnerRed, setSpinnerRed] = useState(true);
+    const [spinnerBlue, setSpinnerBlue] = useState(true);
 
     useEffect(() => {
             axios.get(`https://pokeapi.co/api/v2/pokemon/${1}/`).then(res => {
                 console.log(res.data)
+                setSpinnerRed(false)
                 getPokiRed(res.data)
     })
     },[])
@@ -19,6 +23,7 @@ import {Container, Col, Row} from 'react-bootstrap';
     useEffect(() => {
         axios.get(`https://pokeapi.co/api/v2/pokemon/${2}/`).then(res => {
             console.log(res.data)
+            setSpinnerBlue(false)
             getPokiBlue(res.data)
 })
 },[])
@@ -32,12 +37,14 @@ import {Container, Col, Row} from 'react-bootstrap';
             <Row>
             <Col lg={6}>
             <Row>
-                Pokemon 1
+               {spinnerRed === true && <Spinner animation="border" variant="danger"/>}
+               {spinnerRed === false && <PokeView battler = {pokeBlue}/> }
             </Row>
             </Col>
             <Col lg={6}>
             <Row>
-                Pokemon 2
+                {spinnerBlue === true && <Spinner animation="border" variant="primary" />}
+                {spinnerBlue === false && <PokeView battler = {pokeRed}/> }
             </Row>
             </Col>
             </Row>
