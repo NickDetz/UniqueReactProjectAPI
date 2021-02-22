@@ -21,7 +21,16 @@ const PokemonState = props => {
 
     }
     //Search Pokimon
-   
+    const  getPokeValue = () => {
+        axios.get(`https://pokeapi.co/api/v2/pokemon/${1}/`).then(res => {
+           
+            dispatch({
+                type: GETPOKIMON,
+                payload : res.data
+            })
+           
+        })
+}
 
 
 

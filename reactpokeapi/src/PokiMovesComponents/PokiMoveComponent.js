@@ -9,18 +9,6 @@ import PokiMoveSelector from './PokiMoveSelector';
 
 const PokiMoveComponent = () => {
     
-
-    
-    //Pokemoves holds 4 moves
-    // Move 1      Move 2
-    // Move 3      Move 4
-
-
-    
-
-    
-
-
     return (
         <div>
             <Container>
