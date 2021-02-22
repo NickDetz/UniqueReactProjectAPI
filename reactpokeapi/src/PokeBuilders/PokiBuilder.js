@@ -1,11 +1,11 @@
 import React from 'react'
 import {Container, Col, Row} from 'react-bootstrap';
-import PokemonContext from '../context/PokemonContext/PokemonState'
+
 
 
  const PokiBuilder = () => {
     return (
-        <PokemonContext>
+        
         <Container>
             <Row>
             <Col lg={6}>
@@ -21,7 +21,7 @@ import PokemonContext from '../context/PokemonContext/PokemonState'
             </Row>
 
         </Container>
-        </PokemonContext>
+        
     )
 }
 

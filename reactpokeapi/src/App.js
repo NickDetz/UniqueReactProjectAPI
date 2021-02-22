@@ -9,6 +9,7 @@ import './pokemoncomponents/PokeDis.css';
 import './PokiMovesComponents/PokiInterface.css';
 import PokiMoveComponent from './PokiMovesComponents/PokiMoveComponent';
 import PokiBuilder from './PokeBuilders/PokiBuilder';
+import PokemonState from './context/PokemonContext/PokemonState';
 
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
  
 
   return (
+    <PokemonState>
     <Fragment>
     <div className="App">
       
@@ -58,6 +60,7 @@ const App = () => {
       
     </div>
     </Fragment>
+    </PokemonState>
   );
 }
 
