@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, {useState, useEffect} from 'react'
 import {Container, Col, Row, Spinner} from 'react-bootstrap';
 import PokeView from './PokeView';
+import PokiInterface from './PokiInterface';
 
 
 
@@ -29,6 +30,8 @@ import PokeView from './PokeView';
 },[])
 
 // used to pick pokemon to build and then fight with team blue then red
+//Will use this as the parent Element to send information down via props and hold
+//Context here as data
 
 
     return (
@@ -39,12 +42,14 @@ import PokeView from './PokeView';
             <Row>
                {spinnerRed === true && <Spinner animation="border" variant="danger"/>}
                {spinnerRed === false && <PokeView battler = {pokeBlue} isGetting = {spinnerRed}/> }
+               <PokiInterface/>
             </Row>
             </Col>
             <Col lg={6}>
             <Row>
                 {spinnerBlue === true && <Spinner animation="border" variant="primary" />}
                 {spinnerBlue === false && <PokeView battler = {pokeRed}/> }
+                <PokiInterface/>
             </Row>
             </Col>
             </Row>

@@ -7,7 +7,7 @@ import {Row, Container, Col} from'react-bootstrap'
             <Container className='justify-content-center'>
             <Row>
                 <Col>
-                hello
+    
                 </Col>
                 <Col>
                 hello1
