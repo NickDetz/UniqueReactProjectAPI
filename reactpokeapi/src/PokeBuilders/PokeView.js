@@ -5,7 +5,7 @@ import React from 'react'
     return (
         <div>
             {battler ? (<p>{battler.name}</p>) : null}
-            {battler ? (<img></img>) : null}
+            {battler ? (<img src ={battler.sprites.front_default}/>) : null}
         </div>
     )
 
