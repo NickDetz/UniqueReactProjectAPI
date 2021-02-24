@@ -5,6 +5,7 @@ import React from 'react'
     return (
         <div>
             {battler ? (<p>{battler.name}</p>) : null}
+            {battler ? (<img></img>) : null}
         </div>
     )
 

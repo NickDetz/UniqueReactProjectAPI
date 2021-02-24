@@ -28,7 +28,7 @@ import PokeView from './PokeView';
 })
 },[])
 
-
+// used to pick pokemon to build and then fight with team blue then red
 
 
     return (
