@@ -3,9 +3,10 @@ import {Row, Container, Col} from'react-bootstrap'
 
  const PokiInterface = ({pokeMoveData}) => {
 
-    const [arrayLength, setArrayLength] = useState()
-    const [moveArray, setMoveArray] = useState([])
-    const [numArray, setNumArray] = useState([])
+    const [move1, setMove1] = useState(0)
+    const [move2, setMove2] = useState(1)
+    const [move3, setMove3] = useState(2)
+    const [move4, setMove4] = useState(3)
 
 
    
@@ -18,18 +19,18 @@ import {Row, Container, Col} from'react-bootstrap'
             <Container className='justify-content-center'>
             <Row>
                 <Col>
-                hello4
+                {pokeMoveData.moves[move1].move.name}
                 </Col>
                 <Col>
-                hello1
+                {pokeMoveData.moves[move2].move.name}
                 </Col>
             </Row>
             <Row>
                 <Col>
-                hello 2
+                {pokeMoveData.moves[move3].move.name}
                 </Col>
                 <Col>
-                hello 3
+                {pokeMoveData.moves[move4].move.name}
                 </Col>
             </Row>
             </Container>
