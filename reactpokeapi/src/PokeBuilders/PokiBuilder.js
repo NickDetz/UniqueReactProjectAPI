@@ -14,14 +14,15 @@ import PokiInterface from './PokiInterface';
     const [spinnerBlue, setSpinnerBlue] = useState(true);
     const [loading1, setLoading1] = useState(false);
     const [loading2, setLoading2] = useState(false);
+    
 
     useEffect(() => {
             axios.get(`https://pokeapi.co/api/v2/pokemon/${1}/`).then(res => {
                // console.log(res.data)
                 setSpinnerRed(false)
                 getPokiRed(res.data)
-                setLoading2(true)
-    })
+               
+    }).then(() =>  setLoading2(true) )
     },[])
 
     useEffect(() => {
@@ -29,8 +30,8 @@ import PokiInterface from './PokiInterface';
            // console.log(res.data)
             setSpinnerBlue(false)
             getPokiBlue(res.data)
-            setLoading1(true)
-})
+            
+}).then(() => setLoading1(true))
 },[])
 
 // used to pick pokemon to build and then fight with team blue then red

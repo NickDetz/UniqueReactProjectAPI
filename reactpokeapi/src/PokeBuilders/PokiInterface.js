@@ -5,20 +5,12 @@ import {Row, Container, Col} from'react-bootstrap'
 
     const [arrayLength, setArrayLength] = useState()
     const [moveArray, setMoveArray] = useState([])
-    const [numArray, setNumArray] = useState([1,2,3,4])
+    const [numArray, setNumArray] = useState([])
 
 
-    function pokiMovesArrayFilter() {
-        // for(const i = 0; i < numArray.length; i++){
-        //     setNumArray(numArray[i] = Math.random() * pokeMoveData.moves.length)
-        // }
-       
-    }
+   
 
-    useEffect(() => {
-       setArrayLength(pokeMoveData.moves.length)
-        pokiMovesArrayFilter(pokeMoveData.moves)
-    }, [])
+    
 
     
     return (
