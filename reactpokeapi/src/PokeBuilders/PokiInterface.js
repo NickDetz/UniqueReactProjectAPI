@@ -7,10 +7,7 @@ import {Row, Container, Col, Button} from'react-bootstrap'
     const [move2, setMove2] = useState(1)
     const [move3, setMove3] = useState(2)
     const [move4, setMove4] = useState(3)
-
-
-   console.log(pokeMoveData)
-
+   
     
 
     
@@ -46,7 +43,11 @@ import {Row, Container, Col, Button} from'react-bootstrap'
                  </Button>
                 </Col>
             </Row>
+            {pokeMoveData.stats[0].base_stat}/{pokeMoveData.stats[0].base_stat}
             </Container>
+            
+
+
         </div>
     )
 }
