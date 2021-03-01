@@ -31,8 +31,8 @@ import PokiInterface from './PokiInterface';
             setSpinnerBlue(false)
             getPokiBlue(res.data)
             
-}).then(() => setLoading1(true))
-},[])
+    }).then(() => setLoading1(true))
+    },[])
 
 // used to pick pokemon to build and then fight with team blue then red
 //Will use this as the parent Element to send information down via props and hold
